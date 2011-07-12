@@ -1,0 +1,65 @@
+<%= form_for(@player) do |f| %>
+  <% if @player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% @player.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :gold %><br />
+    <%= f.text_field :gold %>
+  </div>
+  <div class="field">
+    <%= f.label :mine %><br />
+    <%= f.text_field :mine %>
+  </div>
+  <div class="field">
+    <%= f.label :soldiers %><br />
+    <%= f.text_field :soldiers %>
+  </div>
+  <div class="field">
+    <%= f.label :knights %><br />
+    <%= f.text_field :knights %>
+  </div>
+  <div class="field">
+    <%= f.label :archers %><br />
+    <%= f.text_field :archers %>
+  </div>
+  <div class="field">
+    <%= f.label :heros %><br />
+    <%= f.text_field :heros %>
+  </div>
+  <div class="field">
+    <%= f.label :alliance_name %><br />
+    <%= f.text_field :alliance_name %>
+  </div>
+  <div class="field">
+    <%= f.label :alliance_id %><br />
+    <%= f.text_field :alliance_id %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

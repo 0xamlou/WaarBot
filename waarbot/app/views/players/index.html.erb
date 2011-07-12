@@ -1,0 +1,45 @@
+<h1>Listing players</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Password</th>
+    <th>Gold</th>
+    <th>Mine</th>
+    <th>Soldiers</th>
+    <th>Knights</th>
+    <th>Archers</th>
+    <th>Heros</th>
+    <th>Alliance name</th>
+    <th>Alliance</th>
+    <th>State</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @players.each do |player| %>
+  <tr>
+    <td><%= player.id %></td>
+    <td><%= player.name %></td>
+    <td><%= player.password %></td>
+    <td><%= player.gold %></td>
+    <td><%= player.mine %></td>
+    <td><%= player.soldiers %></td>
+    <td><%= player.knights %></td>
+    <td><%= player.archers %></td>
+    <td><%= player.heros %></td>
+    <td><%= player.alliance_name %></td>
+    <td><%= player.alliance_id %></td>
+    <td><%= player.state %></td>
+    <td><%= link_to 'Show', player %></td>
+    <td><%= link_to 'Edit', edit_player_path(player) %></td>
+    <td><%= link_to 'Destroy', player, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Player', new_player_path %>

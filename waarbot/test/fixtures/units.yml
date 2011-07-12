@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  code: 1
+  name: MyString
+  cost: 1
+  attack: 1
+  defense: 1
+
+two:
+  code: 1
+  name: MyString
+  cost: 1
+  attack: 1
+  defense: 1

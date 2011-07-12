@@ -1,0 +1,31 @@
+<h1>Listing units</h1>
+
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Name</th>
+    <th>Cost</th>
+    <th>Attack</th>
+    <th>Defense</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @units.each do |unit| %>
+  <tr>
+    <td><%= unit.code %></td>
+    <td><%= unit.name %></td>
+    <td><%= unit.cost %></td>
+    <td><%= unit.attack %></td>
+    <td><%= unit.defense %></td>
+    <td><%= link_to 'Show', unit %></td>
+    <td><%= link_to 'Edit', edit_unit_path(unit) %></td>
+    <td><%= link_to 'Destroy', unit, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Unit', new_unit_path %>

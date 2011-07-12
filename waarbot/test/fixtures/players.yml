@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  name: MyString
+  password: MyString
+  gold: 1
+  mine: 1
+  soldiers: 1
+  knights: 1
+  archers: 1
+  heros: 1
+  alliance_name: MyString
+  alliance_id: 1
+  state: 1
+
+two:
+  id: 1
+  name: MyString
+  password: MyString
+  gold: 1
+  mine: 1
+  soldiers: 1
+  knights: 1
+  archers: 1
+  heros: 1
+  alliance_name: MyString
+  alliance_id: 1
+  state: 1
