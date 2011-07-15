@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110711195016) do
+ActiveRecord::Schema.define(:version => 20110713162241) do
 
   create_table "players", :force => true do |t|
     t.string   "name"
@@ -20,10 +20,24 @@ ActiveRecord::Schema.define(:version => 20110711195016) do
     t.integer  "soldiers"
     t.integer  "knights"
     t.integer  "archers"
-    t.integer  "heros"
     t.string   "alliance_name"
     t.integer  "alliance_id"
     t.integer  "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "may_attack"
+    t.integer  "heroes"
+    t.integer  "xp"
+  end
+
+  create_table "targets", :force => true do |t|
+    t.integer  "ingame_id"
+    t.string   "name"
+    t.integer  "xp"
+    t.integer  "gold"
+    t.integer  "state"
+    t.integer  "population"
+    t.string   "alliance"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

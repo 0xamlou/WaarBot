@@ -57,16 +57,21 @@ class PlayersController < ApplicationController
   # PUT /players/1.xml
   def update
     @player = Player.find(params[:id])
+    @player.updateStats
 
     respond_to do |format|
-      if @player.update_attributes(params[:player])
-        format.html { redirect_to(@player, :notice => 'Player was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @player.errors, :status => :unprocessable_entity }
-      end
+      format.html { redirect_to(players_url) }
+      format.xml  { head :ok }
     end
+#    respond_to do |format|
+#      if @player.update_attributes(params[:player])
+#        format.html { redirect_to(@player, :notice => 'Player was successfully updated.') }
+#        format.xml  { head :ok }
+#      else
+#        format.html { render :action => "edit" }
+#        format.xml  { render :xml => @player.errors, :status => :unprocessable_entity }
+#      end
+#    end
   end
 
   # DELETE /players/1

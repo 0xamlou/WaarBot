@@ -1,4 +1,6 @@
 Waarbot::Application.routes.draw do
+  resources :targets
+
   resources :players
 
   resources :units
