@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  ingame_id: 1
+  name: MyString
+  xp: 1
+  gold: 1
+  state: 1
+  population: 1
+  alliance: MyString
+
+two:
+  ingame_id: 1
+  name: MyString
+  xp: 1
+  gold: 1
+  state: 1
+  population: 1
+  alliance: MyString

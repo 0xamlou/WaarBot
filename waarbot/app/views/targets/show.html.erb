@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ingame:</b>
+  <%= @target.ingame_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @target.name %>
+</p>
+
+<p>
+  <b>Xp:</b>
+  <%= @target.xp %>
+</p>
+
+<p>
+  <b>Gold:</b>
+  <%= @target.gold %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @target.state %>
+</p>
+
+<p>
+  <b>Population:</b>
+  <%= @target.population %>
+</p>
+
+<p>
+  <b>Alliance:</b>
+  <%= @target.alliance %>
+</p>
+
+
+<%= link_to 'Edit', edit_target_path(@target) %> |
+<%= link_to 'Back', targets_path %>

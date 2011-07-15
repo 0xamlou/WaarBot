@@ -1,0 +1,35 @@
+<h1>Listing targets</h1>
+
+<table>
+  <tr>
+    <th>Ingame</th>
+    <th>Name</th>
+    <th>Xp</th>
+    <th>Gold</th>
+    <th>State</th>
+    <th>Population</th>
+    <th>Alliance</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @targets.each do |target| %>
+  <tr>
+    <td><%= target.ingame_id %></td>
+    <td><%= target.name %></td>
+    <td><%= target.xp %></td>
+    <td><%= target.gold %></td>
+    <td><%= target.state %></td>
+    <td><%= target.population %></td>
+    <td><%= target.alliance %></td>
+    <td><%= link_to 'Show', target %></td>
+    <td><%= link_to 'Edit', edit_target_path(target) %></td>
+    <td><%= link_to 'Destroy', target, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Target', new_target_path %>
